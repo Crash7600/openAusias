@@ -30,9 +30,11 @@ import javax.servlet.http.HttpServletResponse;
 import net.daw.control.operation.generic.specific.implementation.DocumentoControlOperationGenSpImpl;
 import net.daw.control.operation.specific.implementation.ProductoControlOperationSpImpl;
 import net.daw.control.operation.specific.implementation.TipoproductoControlOperationSpImpl;
+import net.daw.control.operation.specific.implementation.LenguajeControlOperationSpImpl;
 import net.daw.control.route.generic.specific.implementation.DocumentoControlRouteGenSpImpl;
 import net.daw.control.route.specific.implementation.ProductoControlRouteSpImpl;
 import net.daw.control.route.specific.implementation.TipoproductoControlRouteSpImpl;
+import net.daw.control.route.specific.implementation.LenguajeControlRouteSpImpl;
 import net.daw.helper.EstadoHelper;
 import net.daw.helper.EstadoHelper.Tipo_estado;
 
@@ -74,6 +76,11 @@ public class JsonControl extends HttpServlet {
                     ProductoControlRouteSpImpl oProductoRoute = new ProductoControlRouteSpImpl();
                     ProductoControlOperationSpImpl oProductoControlOperation = new ProductoControlOperationSpImpl(request);
                     jsonResult = oProductoRoute.execute(request, oProductoControlOperation);
+                }
+                if ("lenguaje".equals(request.getParameter("ob"))) {
+                    LenguajeControlRouteSpImpl oLenguajeRoute = new LenguajeControlRouteSpImpl();
+                    LenguajeControlOperationSpImpl oLenguajeControlOperation = new LenguajeControlOperationSpImpl(request);
+                    jsonResult = oLenguajeRoute.execute(request, oLenguajeControlOperation);
                 }
                 if ("tipoproducto".equals(request.getParameter("ob"))) {
                     TipoproductoControlRouteSpImpl oTipoproductoRoute = new TipoproductoControlRouteSpImpl();

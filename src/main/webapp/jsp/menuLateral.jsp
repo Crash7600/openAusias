@@ -41,5 +41,7 @@
     <div class="list-group">
 
         <a  class="list-group-item" id="lnkDocumento" href="jsp#/documento">Documento</a> 
+        <a  class="list-group-item" id="lnkDocumento" href="jsp#/producto">Producto</a>
+        <a  class="list-group-item" id="lnkDocumento" href="jsp#/">Lenguaje</a>
     </div>
 </div>
